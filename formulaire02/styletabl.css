@@ -1,0 +1,119 @@
+*{
+   padding: 0;  
+ margin: 0;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.super_div{
+    display: block;
+    width: 396px;
+    background: white;
+    box-shadow: 4px 4px red;
+    border-radius: 10px;
+    height: 354px;
+    margin: 109px;
+    overflow: hidden;
+}
+.mini_div1,.mini_div2{
+    background: white;
+    width: 330px;
+    padding: 20px;
+    height: 210px;
+    border-radius: 10px;
+    margin:auto ;
+    margin-top:-347px ;
+    /*margin-top: 6px;*/
+    margin-bottom: 25px;
+   
+    
+}
+.mini_div2{
+    width: 330px;
+    padding: 20px;
+    height: 210px;
+    margin:auto ;
+   
+    /*margin-top:-447px ;*/
+    margin-top:-275px ;/*-275*/
+    margin-left: 407px;/* 13 */
+   
+    
+}
+input[type="email"],input[type="text"],input[type="password"]{
+    padding: 7px;
+    text-align: center;
+    width: 260px;
+    margin: 13px auto auto 25px;
+    border-radius: 25px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    font-family: tahoma,arial;
+    line-height: 2;
+
+}
+.checkinput{
+    display: inline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+input[type="checkbox"]{
+   
+    margin:13px 7px -26px 26px;
+}
+legend{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: rgb(16, 219, 219);
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+input[value="Login"]{
+    padding:5px;
+    margin:30px auto auto 130px;
+    width: 65px;
+    border-radius: 13px;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.slide-controls{
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+   /* border:1px solid lightgrey;*/
+    margin-left: 407px;
+    margin-top: 5px;
+    border: none;
+}
+h2{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    margin-left: -86px;
+ } 
+button{
+    height: 100%;
+    width: 100%;
+    
+   border: none;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer ;       
+    
+}
