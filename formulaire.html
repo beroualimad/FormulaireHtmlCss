@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="styleform.css">
+   
+</head>
+<body>
+<div class="container">
+    <h2>Inscrire</h2>
+    <div class="slide-controls">
+        <input type="radio" name="slider" id="login" checked />
+        <input type="radio" name="slider" id="signup" />
+        <label for="login" class="slide login">Signup</label>
+        <label for="signup" class="slide signup">Login</label>
+        <div class="slide-tab"></div>
+    </div>
+<div class="inner">  
+<form class="login">
+
+<div  class="user-details">
+ <div class="input-box">
+<label for="nom" class="details">Nom :</label>
+<input type="text" name="Nom" id="nom" required minlength="3" maxlength="12" size="10" />
+</div> 
+<div class="input-box">
+<label for="prenom" class="details">Prenom :</label>
+<input type="text" name="Prenom" id="prenom" required minlength="4" maxlength="12" size="10"/>
+</div> 
+<div class="input-box">
+    <label for="Email" class="details">Email :</label>
+    <input type="email" name="Email" id="Email" required validate/>
+</div> 
+<div class="input-box">
+        <label for="Passwor" class="details">Password</label>
+        <input type="password" name="Password" id="Passwor" required minlength="4" maxlength="12" size="10"/>
+</div> 
+
+<div class="input-box">
+        <label for="Tel" class="details">Tel :</label>
+        <input type="tel" name="Tel" id="Tel" placeholder="xxx-xxx-xxxx" required minlength="10" maxlength="10" size="10"/>
+        <p id="demo1"></p>
+</div> 
+<div class="input-box">
+    <label for="etablissement" class="details">Etablissement :</label>
+    <input list="Etablissement" name="etablissement" id="etablissement" required/>
+    <datalist id="Etablissement">
+        <option value="et1" >
+        <option value="et2" >
+        <option value="et3" >
+    </datalist>
+</div> 
+<div class="input-box">
+    <label for="formation" class="details">Formation :</label>
+    <input list="Formation" name="formation" id="formation" required />
+    <datalist id="Formation">
+        <option value="for1" >
+        <option value="for2" >
+        <option value="for3" >
+    </datalist>
+</div> 
+<div class="input-box">
+<label  for="inscrire" class="details">Inscrire comme :</label>
+<select  name="inscrire" id="inscrire" required>
+   <option value="">--</option>
+   <option  value="A" class="inscrire_app">Apprenant</option>
+   <option  value="F" id="inscrire_for">Formateur</option>
+</select>
+</div> 
+
+<div class="input-box">
+<label for="gender" class="details">Gender :</label>
+<select name="gender" id="gender" required>
+   <option value="">--</option>
+   <option value="Ma">Male</option>
+   <option value="Fe">Female</option>
+</select>
+</div> 
+<div class=" input-box_f">
+    <label for="File" class="details">upload:</label>
+    <input type="file" name="file" value ="Upload CV" placeholder="Upload CV"  id="File" multiple />
+</div> 
+<div class="input-box input-box_N">
+    <label for="numb" class="details">Numero de Carte:</label>
+    <input type="number" name="Number" id="numb" required minlength="16" maxlength="16" size="10" placeholder="xxxx-xxxx-xxxx-xxxx" />
+    <p id="demo"></p>
+</div> 
+
+<div class="input-box input-box_C">
+    <label for="Number" class="details">CCV :</label>
+    <input type="number" name="Number" id="Number"  required placeholder="xxx" />
+    
+</div> 
+<div class="input-box input-box_M">
+    <label for="Month" class="details">date de Carte:</label>
+    <input type="month" name="Month" id="Month" value="dd/yy"  min="2021-06" max="2023-12"  required  pattern="[0-9]{4}-[0-9]{2}" />
+
+</div>
+<div class="button">
+    <input type="submit" value="valid" />
+</div>
+</div>
+
+</form>
+</div> 
+<div class="container2">
+    <form class="signup">
+        <div class="input-box">
+            <label for="Email" class="details">Email :</label>
+            <input type="email" name="Email" id="Email" validate required />
+        </div> 
+        <div class="input-box">
+                <label for="Passwor" class="details">Password</label>
+                <input type="password" name="Password" id="Passwor" required
+                minlength="4" maxlength="10" size="10" />
+        </div> 
+        <div class="buttn">
+            <input type="submit" value="valid" />
+        </div>
+    </form>
+    </div>
+
+</div>
+
+<script>
+    const loginform = document.querySelector("form.login");
+    const signupform = document.querySelector("form.signup");
+    const loginbtn = document.querySelector("label.login");
+    const signupbtn = document.querySelector("label.signup");
+    const innerbtn = document.querySelector("div.inner");
+    const contform = document.querySelector("div.container2");
+    const contform0 = document.querySelector("div.container");
+    const inscFor = document.getElementById("inscrire");
+    const file_show = document.querySelector("div.input-box_f");
+    const botton = document.querySelector("div.button");
+    const cart_num = document.querySelector("div.input-box_N");
+    const cart_ccv = document.querySelector("div.input-box_C");
+    const cart_date = document.querySelector("div.input-box_M");
+    const bfunc = document.getElementById("funct");
+
+    loginbtn.onclick = (()=>{
+        innerbtn.style.marginLeft = "-120%";
+        contform.style.display ="block";
+        contform.style.marginRight = "113px";
+        innerbtn.style.display="none";
+        contform0.style.maxWidth= "404px";
+        contform.style.width= "111%";
+        contform.style.marginLeft ="-10px";
+    });
+    signupbtn.onclick = (()=>{
+        
+        contform.style.marginRight = "-430px";
+        contform.style.display="none";
+        innerbtn.style.display="block";
+        innerbtn.style.marginLeft = "0%";
+        contform0.style.maxWidth= "700px";
+        contform.style.width= "64%";
+        contform.style.marginLeft ="146px";
+        
+    });
+    inscFor.addEventListener ('change', function() {
+        var index =  inscFor.options[inscFor.selectedIndex].value;
+        if(index == "F"){
+        file_show.style.display="block";
+        botton.style.marginLeft="254px";
+        cart_num.style.display="none";
+        cart_ccv.style.display="none";
+        cart_date.style.display="none"; 
+
+        }else{
+            if(index == "A"){
+        file_show.style.display="none";
+        botton.style.marginLeft="254px";
+        cart_num.style.display="block"; 
+        cart_ccv.style.display="block";
+        cart_date.style.display="block";
+        }else{
+        file_show.style.display="none";
+        botton.style.marginLeft="1px";
+        cart_num.style.display="none"; 
+        cart_ccv.style.display="none";
+        cart_date.style.display="none";
+
+        }}
+    });
+    
+bfunc.onclick = (()=>{
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("numb").value;
+ 
+  // If x is Not a Number or less than one or greater than 10
+  if (isNaN(x) || x < 1 || x.length()>16 ) {
+   
+          text = "Input not valid";
+      
+  } else {
+    text=" ";
+  }
+  document.getElementById("demo").innerHTML = text;
+});
+
+bfunc.onclick =(()=>
+{
+  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  var text;
+  if( document.getElementById("Tel").value.match(phoneno))
+     {
+	   text="";
+	 }
+   else
+     {
+        text="invalid phone number"
+     }
+     document.getElementById("demo1").innerHTML = text;
+});
+
+
+</script>
+</body>
+
+</html>
